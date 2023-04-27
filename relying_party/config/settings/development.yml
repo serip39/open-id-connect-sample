@@ -1,0 +1,3 @@
+openid_connect:
+  host: d28a-2405-1206-86-7f00-6594-3076-f9ac-17dd.ngrok-free.app
+  redirect_uri: http://localhost:5000/users/auth/mdh/callback
