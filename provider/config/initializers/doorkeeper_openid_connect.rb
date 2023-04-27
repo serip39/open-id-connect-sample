@@ -58,5 +58,14 @@ Doorkeeper::OpenidConnect.configure do
     normal_claim :email, scope: :openid do |resource_owner|
       resource_owner.email
     end
+    normal_claim :name, scope: :openid do |resource_owner|
+      resource_owner.name
+    end
+    normal_claim :company_name, scope: :openid do |resource_owner|
+      'company_a'
+    end
+    normal_claim :department, scope: :openid do |resource_owner|
+      'department_a'
+    end
   end
 end

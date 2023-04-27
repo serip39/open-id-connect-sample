@@ -1,2 +1,2 @@
 doorkeeper:
-  issuer: 'http://localhost:3000'
+  issuer: 'https://d28a-2405-1206-86-7f00-6594-3076-f9ac-17dd.ngrok-free.app'
