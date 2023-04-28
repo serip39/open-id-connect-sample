@@ -295,6 +295,10 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  config.omniauth :azure_activedirectory_v2,
+                  client_id: Rails.application.credentials.azure.client_id,
+                  client_secret: Rails.application.credentials.azure.client_secret,
+                  tenant_id: Rails.application.credentials.azure.tenant_id
 
   # ==> Hotwire/Turbo configuration
   # When using Devise with Hotwire/Turbo, the http status for error responses
