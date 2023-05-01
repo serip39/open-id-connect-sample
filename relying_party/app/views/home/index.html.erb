@@ -20,13 +20,11 @@
     </p>
 
     <div>Re Auth
-      <%= form_tag('/users/auth/mdh', method: 'post') do %>
-        <button type='submit'>Re Login</button>
-      <% end %>
+      <%# OpenID Providerにアクセスして、リダイレクトするため、turbo: false とする %>
+      <%= button_to 'Re Login', user_mdh_omniauth_authorize_path, data: { turbo: false }, method: :post %>
     </div>
   <% else %>
-    <%= form_tag('/users/auth/mdh', method: 'post') do %>
-      <button type='submit'>Login</button>
-    <% end %>
+    <%# OpenID Providerにアクセスして、リダイレクトするため、turbo: false とする %>
+    <%= button_to 'Login', user_mdh_omniauth_authorize_path, data: { turbo: false }, method: :post %>
   <% end %>
 </div>

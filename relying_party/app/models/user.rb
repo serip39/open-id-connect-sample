@@ -28,7 +28,6 @@ class User < ApplicationRecord
 
 
   def self.from_omniauth(auth)
-    binding.irb
     user = where(provider: auth.provider, uid: auth.uid).first_or_create do |u|
       u.email = auth.info.email
       u.password = Devise.friendly_token[0, 20]
